@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Excel clone</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+</head>
+<body>
+    <!-- <div class="menu">
+        <div class="file">File</div>
+        <div class="home active-menu">Home</div>
+    </div> -->
+    <div class="menu-options">
+        <div class="file-menu-options hide">File options</div>
+        <div class="home-menu-options">
+            <div class="font-style">
+                <div class="bold">
+                    <i class="fas fa-bold"></i>
+                </div>
+                <div class="underline">
+                    <i class="fas fa-underline"></i>
+                </div>
+                <div class="italic">
+                    <i class="fas fa-italic"></i>
+                </div>
+            </div>
+            <div class="text-alignment">
+                <div class="left-align">
+                    <i class="fas fa-align-left"></i>
+                </div>
+                <div class="center-align">
+                    <i class="fas fa-align-center"></i>
+                </div>
+                <div class="right-align">
+                    <i class="fas fa-align-right"></i>
+                </div>
+            </div>
+            <div class="text-styling">
+                
+                <div class="text-color">
+                    <i class="fas fa-font"></i>
+                </div>
+                <input type="color" id="favcolor" value="#000000">
+            </div>
+
+            <div class="cell-styling">
+                <div class="cell-color">
+                    <i class="fas fa-fill-drip"></i>
+                </div>
+                <input type="color" id="cell-favcolor" value="#000000">
+            </div>
+            <div class="font-family-size">
+                <select class="font-family">
+                    <option value="arial">arial</option>
+                    <option value="sans serif">sans serif</option>
+                    <option value="Comic sans Ms">Comic sans Ms</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Caveat">Caveat</option>
+                </select> 
+                <select class="font-size">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16" selected>16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="address-content">
+        <input type="text" class="address" readonly>
+        <input type="text" class="formula">
+    </div>
+    <div class="cells-content"></div>
+    <div class="sheets">
+        <div class="add-sheet">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="sheets-list">
+            <div class="sheet active-sheet" sheetid="0">Sheet 1</div>
+            <!-- <div class="sheet">Sheet 2</div>
+            <div class="sheet">Sheet 3</div> -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const socket = io();
+    </script>
+    <script src="./init.js"></script>
+    <script src="./script.js"></script>
+    <script src="util.js"></script>
+    <script src="sheets.js"></script>
+    <script src="menu.js"></script>
+    <script src="socket.js"></script>
+</body>
+</html>
